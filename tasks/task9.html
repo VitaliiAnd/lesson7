@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Дано покази температур (довільна кількість). Розробити функцію, яка дозволить підрахувати 
+        кількість від’ємних показів температури.
+    </h3>
+    <script>
+    
+        let temperatureNum = parseInt(prompt('Введіть довільну кількість показників'))
+        function temperature(value) {
+            let negativeValue = 0
+            for (let a = 1; a <= value; a++) {
+                let userValue = parseInt(prompt(`Введіть показник ${a}`))
+                if (userValue < 0) negativeValue += 1
+            }
+            return negativeValue
+        }
+        let temp = temperature(temperatureNum)
+        document.write(`Кількість від’ємних показів температури ${temp}`)
+    </script>
+</body>
+</html>

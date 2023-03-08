@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Створити функцію, яка для 3 заданих чисел знаходить одночасно 
+        декілька результатів: кількість парних, кількість додатних, кількість більших за 100.
+    </h3>
+    <script>
+        let evenNum = 0
+        let addNum = 0
+        let greatedNum = 0
+        function results(a, b, c) {
+            if (a % 2 === 0) evenNum++
+            if (b % 2 === 0) evenNum++
+            if (c % 2 === 0) evenNum++
+
+            if (a > 0 === 0) addNum++
+            if (b > 0 === 0) addNum++
+            if (c > 0 === 0) addNum++
+
+            if (a > 100) greatedNum++
+            if (b > 100) greatedNum++
+            if (c > 100) greatedNum++
+
+            return evenNum, addNum, greatedNum
+        }
+        let a = parseFloat(prompt('введіть перше число'))
+        let b = parseFloat(prompt('введіть друге число'))
+        let c = parseFloat(prompt('введіть третє число'))
+
+        let result = results(a, b, c)
+
+        document.write(`
+        кількість парних '${evenNum}',<br> 
+        кількість доданих '${addNum}',<br> 
+        кількість більших за 100 '${greatedNum}'
+        `)
+    </script>
+
+</body>
+</html>

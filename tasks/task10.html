@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Дано покази температур (довільна кількість). Розробити функцію, 
+        яка дозволить знайти середнє 
+        значення для додатних показів температури.
+    </h3>
+    <script>
+        let userValue = parseInt(prompt('кількість показників'))
+        let quantityValue = 0
+        let sumTemperatur = 0
+
+        function isTemperaturValue(deg) {
+            let result
+            if (deg > 0) result = true
+            else return result
+            return result
+        }
+
+        function isTemperaturePlus(deg) {
+            let result
+            if (deg > 0) result = deg
+            else result = false
+            return result
+        }
+
+        for (let a = 1; a <= userValue; a++){
+            let userTemperatureValue = parseFloat(prompt(`ввести показник температури ${a}`))
+            quantityValue = quantityValue + isTemperaturValue(userTemperatureValue)
+            sumTemperatur = sumTemperatur + isTemperaturePlus(userTemperatureValue)
+        }
+        let averageSumtemperatur = sumTemperatur / quantityValue
+        let result = document.write(`середнє значення ${averageSumtemperatur}`)
+    </script>
+</body>
+</html>

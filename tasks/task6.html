@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>
+        <a href="../index.html"> Назад</a>
+    </h3>
+    <h3>
+        Створити функцію, яка створює таблицю з вказаною кількістю рядків 
+        і стовпців (таблиця заповнюється заданим фіксованим повідомленням).
+    </h3>
+
+    <script>
+        function getTable(column, row, mass) {
+            document.write('<table border="1px">')
+                for (let a = 0; a < row; a++) {
+                    document.write('<tr>')
+                    for (let b = 0; b < column; b++){
+                        document.write(`<td>${mass}</td>`)
+                    }
+                    document.write('</tr>')
+                }
+        document.write('</table>')
+        }
+        let userColumn = parseInt(prompt('кількість стовпців'))
+        let userRow = parseInt(prompt('кількість рядків'))
+        let userMassage = prompt('введіть повідомлення')
+
+        let resultTable = getTable(userColumn, userRow, userMassage)
+    </script>
+</body>
+</html>

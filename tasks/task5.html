@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h3>
+            <a href="../index.html"> Назад</a>
+        </h3>
+        <h3>
+            Створити окремі функції, які переводять:
+            Сантиметри у дюйми;
+            Кілограми у фунти;
+            Кілометри у милі.
+        </h3>
+        <script>
+        const userCm = parseFloat(prompt('скільки см будемо переводити?'))
+        const userKg = parseFloat(prompt('скільки кг будемо переводити?'))
+        const userKm = parseFloat(prompt('скільки км будемо переводити?'))
+
+        function getCmToInch(centimiters){
+            const inch = 2.54
+            return centimiters / inch
+        }
+        function getkgToPound(kilogram) {
+            const pound = 0.453
+            return kilogram / pound
+        }
+        function getKmtoMile(kilometer) {
+            const mile = 1.60
+            return kilometer / mile
+        }
+
+        let inch = getCmToInch(userCm)
+        let pound = getkgToPound(userKg)
+        let mile = getKmtoMile(userKm)
+
+        document.write(`
+            ${userCm} сантиметрів або ${inch} дюймів;<br>
+            ${userKg} кілограм  або ${pound} фунтів;<br>
+            ${userKm} кілометрів або ${mile} миль
+        `)
+
+    </script>
+    </body>
+</html>
